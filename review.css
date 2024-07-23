@@ -1,0 +1,132 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+section {
+    text-align: center;
+}
+
+.review {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5%;
+}
+
+h3 {
+    font-size: 8vh;
+}
+
+.underline {
+    background-color: aqua;
+    height: 5px;
+    width: 15%;
+    margin-top: -4%;
+}
+
+.main {
+    width: 50%;
+    max-width: 1400px; /* Ensures the main container does not exceed 1400px */
+    height: auto; /* Allows the height to adjust based on content */
+    margin: 2% auto; /* Centers the container with margin */
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    border: 2px solid rgba(0, 166, 255, 0.97);
+    display: flex;
+    flex-direction: column; /* Aligns children vertically */
+    align-items: center; /* Centers children horizontally */
+    padding: 20px; /* Adds padding inside the container */
+    position: relative; /* Allows absolute positioning of child elements */
+}
+
+.circle {
+    width: 150px;
+    height: 150px;
+    background-color: rgba(0, 166, 255, 0.97);
+    border-radius: 50%;
+    position: absolute; /* Absolute positioning within the .main container */
+    top: 16px; /* Positions the circle from the top of .main */
+    left: 50%; /* Centers the circle horizontally within .main */
+    transform: translateX(-42%); /* Adjusts the circle's position to the left */
+    z-index: 0; /* Positions the circle behind other elements */
+}
+
+.circle2 {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 166, 255, 0.97);
+    border-radius: 50%;
+    position: absolute; /* Absolute positioning within the .main container */
+    top: 22px; /* Positions the circle from the top of .main */
+    left: 40%; /* Positions the circle relative to the parent's width */
+    transform: translateX(-20%); /* Adjusts the circle's position to the left */
+    z-index: 3; /* Positions the circle above other elements */
+}
+
+.circle2 p {
+    color: white;
+    font-weight: bold;
+    font-size: 50px; /* Font size of the text inside the circle */
+    margin: 0; /* Removes default margin */
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; 
+    object-fit: cover;
+    position: relative; /* Ensures stacking order */
+    z-index: 2; /* Positions the image above .circle but below .circle2 */
+}
+
+.main h4 {
+    color: black;
+    margin-top: 20px; /* Adjusted top margin */
+    font-size: 27px;
+}
+
+#job {
+    margin-top: -20px; /* Adjusted top margin to bring closer to h4 */
+    font-weight: 550;
+    font-size: 20px;
+}
+
+#info {
+    margin-top: -5px; /* Adjusted top margin */
+    font-size: 20px;
+    overflow: hidden; /* Ensures content does not overflow the container */
+}
+
+.prev-btn, .next-btn {
+    background-color: transparent; /* Transparent background for buttons */
+    border: none; /* Removes default button border */
+    color: rgba(0, 166, 255, 0.97); /* Button text color */
+}
+
+.random-btn {
+    background-color: transparent; /* Transparent background for button */
+    margin-top: 0.6%; /* Adjusted top margin */
+}
+
+.random-btn:hover {
+    color: white; /* Text color on hover */
+    background-color: rgba(0, 166, 255, 0.97); /* Background color on hover */
+}
+@media (max-width: 800px){
+    .review h3 {
+        font-size: 5vh;
+    }
+    .main{
+        width: 85%;
+    }
+}
+@media (max-width: 992px){
+    h3 {
+        font-size: 8vh;
+    }
+    .main{
+        width: 85%;
+    }
+}
